@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr); 
+  gap: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.posts-grid img{
+  width: 95%;
+  height: 50%;
+}
+
+
+.post-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+}
+
+.post-card:hover {
+  transform: translateY(-5px); 
+}
+
+
+.post-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+
+.post-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+
+.post-card button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #ffff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.post-card button:hover {
+  background-color: #e60000;
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+
+.pagination button {
+  background-color: #a8a8a8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #5b5d5f;
+}
+
+
+.pagination button.active {
+  background-color: #ececec;
+  color: black;
+  font-weight: bold;
+}
+
+
+.App {
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+}
